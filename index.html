@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Wordle Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="home-body">
+
+    <header class="sidebar">
+        <nav>
+            <ul>
+                <li class="navItem" onclick="scrollToSection('about')" id="nav-about">About</li>
+                <li class="navItem" onclick="scrollToSection('how')" id="nav-how">How to Play</li>
+                <li class="navItem" onclick="scrollToSection('info')" id="nav-info">Game Info</li>
+                <li class="navItem" onclick="scrollToSection('login')" id="nav-login">Play</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content">
+        <h1>Wordle Game</h1>
+
+        <article class="card">
+
+            <section id="about">
+                <h2>About Wordle</h2>
+
+                <p>
+                    This version of Wordle is not just about guessing a word. It adds more challenges to make the game
+                    more exciting and less predictable.
+                </p>
+
+                <p>
+                    The goal is still simple. You try to guess a hidden 5 letter word. But unlike the original version,
+                    this game gives you different difficulty levels and even challenges you with quizzes if you need
+                    help.
+                </p>
+
+                <p>
+                    The game was inspired by the original Wordle, but we added our own twist to make it more fun
+                    especially for students. Instead of just guessing, you also need to think fast and answer questions
+                    correctly if you want hints.
+                </p>
+
+                <p>
+                    There are also sounds when you win or lose, which makes the experience feel more real. Every time
+                    you play, the word changes so it never feels the same.
+                </p>
+
+                <p>
+                    This game is designed to test your vocabulary and decision making. You can play it many
+                    times and try to improve your guessing skills.
+                </p>
+
+                <p>
+                    It may look simple at first, but once you try harder modes, it becomes more intense and sometimes
+                    even stressful in a fun way.
+                </p>
+            </section>
+
+            <section id="how">
+                <h2>How to Play</h2>
+
+                <p><strong>Step 1.</strong> Choose a difficulty at the top of the game.</p>
+
+                <img src="firstImage.png" alt="Difficulty Selection" class="guide-img">
+
+                <p><strong>Step 2.</strong> Look at the row of empty boxes. This is where you type your guess.</p>
+
+                <img src="secondImage.png" alt="Empty Board" class="guide-img">
+                <img src="thirdImage.png" alt="Empty Row" class="guide-img">
+
+                <p><strong>Step 3.</strong> Type one letter in each box until you complete a 5 letter word.</p>
+
+                <img src="fourthImage.png" alt="Word Entered" class="guide-img">
+
+                <p><strong>Step 4.</strong> Click the Guess button or press Enter to submit your word.</p>
+
+                <img src="fifthImage.png" alt="Submit Guess" class="guide-img">
+
+                <p><strong>Step 5.</strong> Check the colors that appear after your guess:</p>
+
+                <ul>
+                    <li>Green - correct letter in the correct place</li>
+                    <li>Yellow - correct letter but wrong place</li>
+                    <li>Gray - letter is not in the word</li>
+                </ul>
+
+                <img src="sixthImage.png" alt="Color Feedback" class="guide-img">
+
+                <p><strong>Step 6.</strong> Use the colors to help you guess the next word.</p>
+
+                <p><strong>Step 7.</strong> Keep going until you find the word or run out of tries.</p>
+
+                <img src="seventhImage.png" alt="Finished Wordle" class="guide-img">
+
+                <p>
+                    Some modes may feel harder than others. You might run into something unexpected while playing.
+                </p>
+            </section>
+
+            <section id="info">
+                <h2>Game Info</h2>
+                <p>This Wordle game features multiple difficulty levels including Easy, Medium, Hard, and Extremely
+                    Impossible.</p>
+                <p>Each mode changes the length of the hidden word and the number of attempts you are given.</p>
+                <p>As the difficulty increases, the game becomes more challenging and requires better strategy and
+                    vocabulary.</p>
+                <p>The game can be played anytime directly in your browser without the need to download anything.</p>
+                <p>Challenge yourself by trying different difficulty levels and improving your guessing skills.</p>
+            </section>
+
+            <section id="login">
+                <h2>Start Playing</h2>
+                <form name="login" action="game.html" onsubmit="return validateForm();">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" placeholder="Enter username">
+                    <br><br>
+                    <button type="submit">Start Game</button>
+                    <button type="reset">Reset</button>
+                </form>
+                <h3 id="greeting"></h3>
+            </section>
+
+        </article>
+    </main>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>

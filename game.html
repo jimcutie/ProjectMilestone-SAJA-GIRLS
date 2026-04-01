@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <title>Simple Wordle</title>
+   <meta name="description" content="A simple Wordle game">
+   <meta name="author" content="S4JA Girls">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="game-body">
+
+   <header>
+      <h1>WORDLE GAME</h1>
+      <p id="date"></p>
+
+      <p id="levels">
+         <span id="easyButton" onclick="setDifficulty('easy')">Easy</span> ·
+         <span id= "mediumButton" onclick="setDifficulty('medium')">Medium</span> ·
+         <span id="hardButton" onclick="setDifficulty('hard')">Hard</span> ·
+         <span id="extremelyImpossibleButton" onclick="setDifficulty('extremelyImpossible')">Extremely Impossible</span>
+      </p>
+
+   </header>
+
+   <main>
+      <form>
+
+         <section>
+            <div id="game"></div>
+         </section>
+
+         <section>
+            <button type="button" class="button" onclick="checkGuess()">Guess</button>
+
+            <button type="button" class="button" onclick="resetGame()">Reset</button>
+         </section>
+
+         <section>
+            <audio id="winSound" src="Golden.mp3"></audio>
+            <audio id="lostSound" src="Takedown.mp3"></audio>
+         </section>
+
+      </form>
+
+      <section>
+         <p id="message"></p>
+      </section>
+
+      <section id="hintFlow" style="display:none;">
+         <p id="hintPrompt"></p>
+         <div id="hintButtons">
+            <button type="button" onclick="startHintFlow('yes')">Yes</button>
+            <button type="button" onclick="startHintFlow('no')">No</button>
+         </div>
+      </section>
+
+      <section id="quizArea">
+         <h3>Quiz Challenge</h3>
+         <p id="quizQuestion"></p>
+         <div id="quizOptions">
+            <button type="button" onclick="checkQuiz(0)">Option 1</button>
+            <button type="button" onclick="checkQuiz(1)">Option 2</button>
+            <button type="button" onclick="checkQuiz(2)">Option 3</button>
+            <button type="button" onclick="checkQuiz(3)">Option 4</button>
+         </div>
+      </section>
+
+      <section id="hintArea" style="display:none;">
+         <h3>Hint Challenge</h3>
+         <p id="hintText"></p>
+      </section>
+   </main>
+
+   <script src="game.js"></script>
+
+</body>
+</html>

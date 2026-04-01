@@ -1,0 +1,222 @@
+#home-body {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px; 
+    line-height: 1.6;
+    color: #222;
+    margin: 0;
+}
+
+#home-body .container {
+    display: flex;
+}
+
+#home-body .sidebar {
+    width: 180px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #eeeeee;
+    padding-top: 40px;
+    border-right: 1px solid #ccc;
+    z-index: 1000; 
+}
+
+#home-body .navItem {
+    padding: 12px 20px;
+    cursor: pointer;
+    text-align: left;
+    pointer-events: auto;
+}
+
+#home-body .navItem:hover {
+    background: #ddd;
+}
+
+#home-body .active {
+    background: black;
+    color: white;
+}
+
+#home-body .content {
+    margin-left: 200px;
+    padding: 40px;
+}
+
+#home-body .card {
+    background: white;
+    max-width: 900px; 
+    padding: 50px; 
+    border: 1px solid #ddd;
+    margin: 40px auto;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05); 
+    position: relative;
+    z-index: 1;
+}
+
+#home-body h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 360px;
+}
+
+#home-body h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+#home-body p {
+    font-size: 18px;
+    text-align: left; 
+    margin-bottom: 15px;
+}
+
+#home-body section {
+    margin-bottom: 150px;
+}
+
+#home-body input {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+#home-body button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#home-body .sidebar ul {
+    list-style-type: none; 
+    padding-left: 0;       
+    margin: 0;
+}
+
+#home-body ul li {
+    margin-bottom: 10px;
+}
+
+#game-body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url("wordleBg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+@media(max-width: 768px){
+    #game-body {
+        background-position: center 30%;
+    }
+}
+
+#game-body h1 {
+    color: rgb(187, 21, 129);     
+    text-shadow: 0 0 5px rgb(21, 16, 127);    
+    font-size: 3em;                 
+    margin-bottom: 15px;            
+}
+
+#game-body #game {
+    margin-top: 20px;
+}
+
+#game-body .row {
+    margin-bottom: 5px;
+}
+
+#game-body .box {
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 3px;
+    border: 2px solid gray;
+    box-shadow: 0 0 8px  rgb(187, 21, 129); 
+    caret-color: transparent;  
+    outline: none;             
+}
+
+#game-body .box:focus{
+    animation: pop 0.15s ease;
+    box-shadow: 0 0 12px rgb(187, 21, 129);
+    border-color: rgb(187, 21, 129);
+}
+
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+#game-body .correct {
+    background-color: green;
+    color: white;
+    box-shadow: 0 0 12px green;
+    border-color: green;
+}
+
+#game-body .present {
+    background-color: goldenrod;
+    color: white;
+    box-shadow: 0 0 12px goldenrod;
+    border-color: goldenrod;
+}
+
+#game-body .wrong {
+    background-color: gray;
+    color: white;
+    box-shadow: 0 0 8px gray;
+}
+
+#game-body .button {
+    padding: 15px 30px;
+    font-size: 2em;
+    background-color: rgb(187, 21, 129);
+}
+
+#game-body #levels span{
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#game-body #levels span:hover{
+    text-decoration: underline;
+    color: rgb(187, 21, 129);
+}
+
+#game-body .levelSelected{
+    color: rgb(187, 21, 129);
+    text-decoration: underline;
+}
+
+#game-body #hintArea{
+    margin-top:20px;
+    padding:15px;
+    background: rgba(0,0,0,0.6);
+    border-radius:10px;
+    color:white;
+    box-shadow:0 0 15px rgb(187,21,129);
+}
+
+#game-body #hintText{
+    font-size:1.2em;
+    margin:10px;
+}
+
+.guide-img {
+    display: block;
+    margin: 15px auto;
+    width: 780px;
+    max-width: 100%;
+    border: 1px solid #ccc;
+}
